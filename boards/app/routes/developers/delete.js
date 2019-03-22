@@ -1,13 +1,16 @@
 import Route from '@ember/routing/route';
+import EmberObject, {set} from "@ember/object";
 
 export default Route.extend({
-  model(){
-    return {copy:{}};
+  afterModel(model){
+    let copy = EmberObject.create(model.toJSON());
+    set(model, 'copy', model);
+    return model;
   },
 
   actions:{
-    cancelDeletion(dev){
-      dev.cancelDeletion(dev).then(this.transitionTo("developers"));
+    cancelDeletion(){
+      this.transitionTo("developers");
     },
     confirmDeletion(dev){
       dev.destroyRecord().then(this.transitionTo("developers"));
