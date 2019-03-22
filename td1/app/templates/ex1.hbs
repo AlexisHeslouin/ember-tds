@@ -1,0 +1,31 @@
+<h1>TD n°1</h1>
+
+
+  <div class=" mt-5  mx-auto col-10">
+    <div class="list-group-item border border-secondary py-0 px-0">
+        <div class="mx-0 mt-0 py-1 bg-info text-center text-white" ><h2> Note  </h2></div>
+        {{textarea class="form-control col-12 mx-auto" value=model.content maxlength=100 placeholder="Entrer votre texte..."}}
+    </div>
+    <div class="list-group-item border border-secondary ">
+        Message : {{model.content}}
+    </div>
+
+    <div class="list-group-item border border-secondary">
+        Nombre de caractère : {{model.size}} / {{model.MAX}}
+    </div>
+
+    <div class="list-group-item border border-secondary text-white text-center">
+        <button class="btn btn-success mx-4" {{action "save" model}}> Save </button>
+        <button class="btn btn-warning mx-4" {{action "reset" model}}> Clear </button>
+    </div>
+
+    <div class="list-group-item border border-secondary py-0 px-0">
+      <div class="px-3 py-1 my-0 alert alert-info">Nombre de caractères restant : {{model.reste}}</div>
+
+      {{#if model.info}}
+        <div class="px-3 py-1 my-0 {{model.warning}}">Note sauvegardée</div>
+      {{/if}}
+    </div>
+
+  </div>
+{{outlet}}

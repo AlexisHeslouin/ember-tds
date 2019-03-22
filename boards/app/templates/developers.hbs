@@ -1,0 +1,35 @@
+<h1>MongoDB TD4</h1>
+
+<br/>
+
+<div class="ui text container">
+  {{#link-to "developers.new" class="ui teal button"}}
+    <i class="add icon"></i>Ajouter un dev...
+  {{/link-to}}
+  <table class="ui table ">
+    <thead>
+      <th>Identity</th>
+      <th></th>
+    </thead>
+    <tbody>
+      {{#each model as |dev|}}
+        <tr>
+          <td>{{dev.identify}}</td>
+          <td >
+            {{#link-to "developers.edit" dev class="ui right floated basic circular icon button "}}
+              <i class="edit icon"></i>
+            {{/link-to}}
+
+            {{#link-to "developers.delete" dev class="ui right floated basic circular icon button red"}}
+              <i class="remove icon"></i>
+            {{/link-to}}
+
+          
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
+
+{{outlet}}

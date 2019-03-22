@@ -1,0 +1,45 @@
+
+<div class="rounded col-6 bg-info mx-auto mt-5 py-5">
+  <div class="text-white mx-auto text-center col-10">
+    <h1>Services</h1>
+  </div>
+  <div class="rounded col-10 text-info bg-light mx-auto mb-3">
+    <p> Choisissez les éléments à inclure </p>
+    <p><b> {{model.countActive}} services selectionnés </b></p>
+  </div>
+
+  <div class="list-group">
+  {{#each model.services as |services|}}
+  <div class="list-group-item my-2 py-3 col-10  mx-auto action {{action "toggleActive" service on="click" }}">
+    {{#if services.active}}
+
+      <div class="row">
+        <div class="col-8 text-left"><b>{{services.name}}</b></div>
+        <div class="col-4 text-right"><b>{{services.price}} €</b></div>
+      </div>
+
+    {{else}}
+
+      <div class="row">
+        <div class="col-8 text-left"><b>{{services.name}}</b></div>
+        <div class="col-4 text-right"><b>{{services.price}} €</b></div>
+      </div>
+
+    {{/if}}
+  </div>
+  {{/each}}
+</div>
+
+  <div class="border-top border-white text-white col-10 row mx-auto py-3">
+    <div class="col-6 text-left"><b>Total :</b></div>
+    <div class="col-6 text-right"><b> {{model.sumActive}} €</b></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+{{outlet}}

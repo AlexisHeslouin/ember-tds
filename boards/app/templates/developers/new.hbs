@@ -1,0 +1,22 @@
+
+<div class="ui container">
+  <div class="ui aligned basic segment">
+    <div class="ui horizontal divider">
+      Add or Edit
+    </div>
+    <div class="two fields">
+
+      <div class="field">
+          <label>Nom</label>
+          {{input value=model.copy.identify class="ui input"}}
+      </div>
+
+      <div class="field">
+        <button {{action "save" model}} class="ui teal button">Enregistrer</button>
+      </div>
+
+    </div>
+    
+  </div>
+</div>
+{{outlet}}
