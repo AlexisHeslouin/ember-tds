@@ -1,7 +1,18 @@
-
 <br/>
-
 <div class="ui text container">
+  <div class="ui three buttons">
+
+    {{#link-to "developers" class="ui right floated icon button "}}
+      Developers
+    {{/link-to}}
+
+    <button class="ui button grey">Projects</button>
+
+    {{#link-to "" dev class="ui right floated icon button "}}
+      Stories
+    {{/link-to}}
+  </div>
+  <div class="ui divider"></div>
   <h1>MongoDB TD4</h1>
   {{#link-to "projects.new" class="ui teal button"}}
     <i class="add icon"></i>Ajouter un projet...
@@ -12,6 +23,7 @@
       <th>Description</th>
       <th>StartDate</th>
       <th>DueDate</th>
+      <th>Owner</th>
       <th></th>
     </thead>
     <tbody>
@@ -21,6 +33,7 @@
           <td>{{pro.descriptif}}</td>
           <td>{{pro.creationDate}}</td>
           <td>{{pro.duoDate}}</td>
+          <td></td>
           <td >
             {{#link-to "projects.edit" pro class="ui right floated basic circular icon button "}}
               <i class="edit icon"></i>
@@ -36,6 +49,5 @@
       {{/each}}
     </tbody>
   </table>
+  {{outlet}}
 </div>
-
-{{outlet}}
