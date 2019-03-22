@@ -1,0 +1,19 @@
+
+<div class="ui container">
+  <div class="ui aligned basic segment">
+    <div class="ui horizontal divider">
+      Delete
+    </div>
+    <div class="two fields">
+      <div class="field">
+          Confirmez la suppression de "{{model.copy.name}}" ?
+      </div>
+      <div class="field">
+        <button {{action "confirmDeletion" model}} class="ui green button">Confirmer</button>
+        <button {{action "cancelDeletion" }} class="ui red button">Annuler</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{outlet}}
