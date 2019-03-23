@@ -1,0 +1,70 @@
+<br/>
+<div class="ui text container">
+  <div class="ui three buttons">
+
+    {{#link-to "developers" class="ui right floated icon button "}}
+      Developers
+    {{/link-to}}
+
+    {{#link-to "projects" class="ui right floated icon button grey"}}
+      Projects
+    {{/link-to}}
+
+    {{#link-to "" dev class="ui right floated icon button "}}
+      Stories
+    {{/link-to}}
+  </div>
+  <div class="ui divider"></div>
+  <div class="ui form">
+      <div class="twelve fields">
+        <div class="field">
+          <i class="folder open icon huge"></i>
+        </div>
+        <div class="field left floated">
+          <p><h1>{{model.copy.name}}</h1>
+          {{model.copy.descriptif}}</p>
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <h3>Stories</h3>
+    <button {{action "storyNew" model.copy}} class="ui teal button"><i class="add icon"></i>Add Story in project</button>
+
+
+    <div class="ui form">
+        <div class="ui divider"></div>
+        <div class="twelve fields">
+          <div class="field">
+            <i class="file icon big"></i>
+          </div>
+          <div class="field left floated">
+            <p><h5>{{model.copy.name}}</h5>
+            {{model.copy.descriptif}}
+
+          </p>
+          </div>
+          <div class="field right floated">
+            <div class="ui labeled button" tabindex="0">
+              <div class="ui basic grey button">
+                {{model.copy.name}}
+              </div>
+              {{#link-to "projects" class="ui grey left pointing label"}}
+                Modifier
+              {{/link-to}}
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+
+
+</div>
+{{outlet}}

@@ -28,12 +28,16 @@
     </thead>
     <tbody>
       {{#each model as |pro|}}
+
         <tr>
-          <td>{{pro.name}}</td>
-          <td>{{pro.descriptif}}</td>
-          <td>{{pro.creationDate}}</td>
-          <td>{{pro.duoDate}}</td>
-          <td></td>
+          {{#link-to "project" pro}}
+            <td>{{pro.name}}</td>
+          {{/link-to}}
+            <td>{{pro.descriptif}}</td>
+            <td>{{pro.creationDate}}</td>
+            <td>{{pro.duoDate}}</td>
+            <td></td>
+
           <td >
             {{#link-to "projects.edit" pro class="ui right floated basic circular icon button "}}
               <i class="edit icon"></i>
@@ -46,6 +50,7 @@
 
           </td>
         </tr>
+
       {{/each}}
     </tbody>
   </table>
