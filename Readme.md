@@ -1,17 +1,18 @@
+# ember-tds
+
 Client Riche
 ============
 
-Bienvenu sur mon repertoire qui regroupe les différents TD du module **Client Riche**
+Bienvenu sur mon repertoire qui regroupe les différents TD du module *Client Riche*
 de l'option Web du DUT Informatique de l'Université de Caen, Ifs Campus 3.
-Ils sont animés par **Jean Christophe HERON**.
-
+Ils sont animés par *Jean Christophe HERON*.
 
 
 Langages et framework utilisés
 ------------------------------
 * HTML
 * CSS
-* JAVA SCRIPT
+* JAVA SCRIPT -- EmberJS
 * MONGODB
 
 * SEMANTIC UI 2.4.2 
@@ -119,11 +120,6 @@ Quelques commandes MongoDB
 	}
 
 	se rendre sur _http://127.0.0.1:8080/boards/Developers
-
-
-
-
-
 
 
 
